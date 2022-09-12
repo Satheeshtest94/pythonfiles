@@ -1,0 +1,4 @@
+****Bill receipt****
+You have ordered:Idly
+Quantity is:5
+You have to pay:130
