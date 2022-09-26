@@ -1,3 +1,5 @@
+import time
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
@@ -23,15 +25,23 @@ obj.func()
     """
 
 class check1():
-    def start(self, web=None):
+    def start(self,web=None):
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=web)
-        self.driver.get("https://www.makemytrip.com/")
+        self.driver.get("https://leafground.com/select.xhtml")
         self.driver.maximize_window()
-        self.driver.find_element(by = By.XPATH,value="//*[text()='From']").click()
-        group = self.driver.find_elements(by = By.XPATH ,value ="//*[@id='root']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]")
+        self.driver.find_element(by = By.XPATH,value="//*[contains(@role,'button')]").click()
+        #group = self.driver.find_element(by = By.XPATH ,value ="//*[contains(@class,'ui-autocomplete-items')]//li")
+        time.sleep(2)
+        #self.driver.find_element(by=By.ID, value="j_idt87:auto-complete_panel")
+        group = self.driver.find_elements(by=By.XPATH, value="//*[contains(@role,'listbox')]//*[contains (@class,'ui-widget ui-corner-all')]//li")
+
+        #group = self.driver.find_elements(by=By.XPATH,
+                                          #value="//span[@id='j_idt87:auto-complete_panel']//*")
         for each in group:
-            if each.text == "Mumbai, India":
-               each.click()
+            if each.text == "AWS":
+                each.click()
+            break
+
 
 
 
