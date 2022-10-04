@@ -17,13 +17,13 @@ class upanddown():
         downloadpath = {"download.defaultdirectory":"C:\\Users\\Sathe\\PycharmProjects\\pythonProject1\\Pythonclass\\selenium\\"}
         chromeoptions.add_experimental_option("prefs",downloadpath)
         chromeoptions.add_argument("--start-maximized")
-        chromeoptions.add_argument("--incognito")
+        #chromeoptions.add_argument("--incognito")
         self.driver = webdriver.Chrome(service = Service(ChromeDriverManager().install()),options=chromeoptions)
         self.driver.get("https://leafground.com/file.xhtml")
         time.sleep(3)
         self.driver.find_element(by = By.XPATH,value="//*[text()='Download']").click()
         time.sleep(3)
-        self.driver.quit()
+        #self.driver.quit()
     def upload(self, web=None):
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=web)
         self.driver.get("https://leafground.com/file.xhtml")
@@ -43,5 +43,5 @@ class upanddown():
 
 obj = upanddown()
 obj.download()
-obj.upload()
+#obj.upload()
 
