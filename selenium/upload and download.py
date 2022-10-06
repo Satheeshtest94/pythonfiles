@@ -14,7 +14,7 @@ import pyautogui
 class upanddown():
     def download(self):
         chromeoptions =webdriver.ChromeOptions()
-        downloadpath = {"download.defaultdirectory":"C:\\Users\\Sathe\\PycharmProjects\\pythonProject1\\Pythonclass\\selenium\\"}
+        downloadpath = {"download.default_directory":"C:\\Users\\Sathe\\PycharmProjects\\pythonProject1\\Pythonclass\\selenium\\"}
         chromeoptions.add_experimental_option("prefs",downloadpath)
         chromeoptions.add_argument("--start-maximized")
         #chromeoptions.add_argument("--incognito")

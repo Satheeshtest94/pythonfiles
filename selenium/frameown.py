@@ -20,6 +20,7 @@ class frames():
         print("First frame:",element)
         #2nd frame
         #self.driver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
+        self.driver.execute_script("window.scrollTo(0, document.querySelector('.scrollingContainer').scrollHeight);")
         time.sleep(2)
         self.driver.switch_to.frame("frame2")
         element2 = self.driver.find_element(by=By.XPATH, value="//*[@id='sampleHeading']").text
@@ -47,4 +48,4 @@ class frames():
 
 
 obj =  frames()
-obj.multiframe()
+obj.frameconce()
