@@ -45,7 +45,7 @@ class lis():
         
         """
         self.driver.find_element(by=By.XPATH, value="(//*[text()='Show'])[6]").click()
-        time.sleep(2)
+
         self.driver.find_element(by=By.XPATH, value="(//*[contains(@class,'ui-dialog-titlebar-icon')])[4]").click()
 
 obj = lis()

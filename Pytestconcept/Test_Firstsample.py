@@ -29,10 +29,10 @@ class Test_firstclass:
 #
 #     @pytest.mark.sanity
 #     #@pytest.mark.run(order=1)
-#     def test_secondTestcase(self):
+#     def test_secondTestcase(self,fixtureconcept):
 #         print("This is the second test case")
 #     @pytest.fixture()
-#     def fixtureconcept(self,fixtureconcept):
+#     def fixtureconcept(self):
 #         print("Before test case")
 #         yield
 #         print("After test case") """
