@@ -1,11 +1,11 @@
 #Writing in workbook
-"""
 from openpyxl import Workbook
 
 # Creating the workbook
 wb = Workbook()
 # Creating active worksheet
 ws = wb.active
+
 # Changing the title of worksheet
 ws.title = 'No1'
 ws1 = wb.create_sheet("No2",1)
@@ -21,7 +21,7 @@ import os
 
 print(os.getcwd())
 
-"""
+
 
 #Reading from workbook
 
@@ -35,12 +35,12 @@ ws = wb.active
 #print(ws)
 
 #print(ws.values)
-
+"""
 for row in range(1,5):
-  for k in row:
+  for k in int(row):
    print(k,end = " ")
   print()
-
+"""
 
 
 
@@ -63,19 +63,18 @@ for row in range(1,5):
 #print(ws.max_row)
 #print(ws.max_column)
 
-"""
+
 
 for row in ws.iter_rows(min_row = 1,max_col = 5,max_row = 2):
     for ws.values in row:
      print(ws.values)
 
-"""
+
 
    
-"""
+
 
 #print(ws['A1'].value)
-"""
 
 
 
