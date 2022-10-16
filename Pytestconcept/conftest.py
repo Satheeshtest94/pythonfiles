@@ -7,7 +7,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 
-from Testdata import testdata
+from Pytestconcept import Testdata
+from Pytestconcept.Utils.excelinput import datainput
 
 
 @pytest.fixture(scope="class")
@@ -20,10 +21,8 @@ def open_launch_exit(request):
    driver.quit()
 @pytest.fixture()
 def user_name(request):
-   return[testdata.username,testdata.password]
+   return Testdata.datafromexcel
 
-@pytest.fixture(params=[{testdata.username,testdata.password},{testdata.username,testdata.password}]
-
-)
+@pytest.fixture(params=Testdata.datafromexcel)
 def multi_data(request):
    return request.param
