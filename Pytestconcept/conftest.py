@@ -15,6 +15,7 @@ from Pytestconcept.Utils.excelinput import datainput
 def open_launch_exit(request):
    web = webdriver.ChromeOptions()
    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=web)
+   driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
    web.add_argument("--start maximized")
    request.cls.driver = driver
    yield
