@@ -1,13 +1,25 @@
 from Sample1 import add
 
+
 class div(add):
 
     def taken(self):
-
-        mk = self.s
-        print("inherited:",mk)
+        self.action(8,9)
 
 
-jk = div()
-jk.taken()
+
+
+
+
+
+obj1 = div()
+obj1.taken()
+
+
+    # mk = self.s
+        # print("inherited:",mk)
+
+#
+# jk = div()
+# jk.taken()
 

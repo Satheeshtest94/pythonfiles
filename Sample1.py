@@ -20,8 +20,8 @@ class sub(add):
         jk = self.a + self.b + s
         print("inherited:",jk,s)
 
-obj = sub()
-#obj.action1(110,20)
-obj.action(11,12)
+# obj = sub()
+# #obj.action1(110,20)
+# obj.action(11,12)
 
 
